@@ -8,12 +8,12 @@ function App(){
   const [data,setData]=useState([]);
 
   const login=async()=>{
-    const res=await axios.post('http://localhost:5000/api/auth/login',{email,password});
+    const res=await axios.post(`${process.env.REACT_APP_HOST}/api/auth/login',{email,password}`);
     setToken(res.data.token);
   }
 
   const fetchData=async()=>{
-    const res=await axios.get('http://localhost:5000/api/questions',{
+    const res=await axios.get(`${process.env.REACT_APP_HOST}/api/questions`,{
       headers:{Authorization:'Bearer '+token}
     });
     setData(res.data);

@@ -89,7 +89,7 @@ function Chatbot() {
 
       try {
         const res = await axios.post(
-          "http://localhost:5000/api/ai/chat",
+          `${process.env.REACT_APP_HOST}/api/ai/chat`,
           { symptoms, age: input }
         );
 
@@ -127,7 +127,7 @@ function Chatbot() {
 
       try {
         const res = await axios.post(
-          "http://localhost:5000/api/ai/chat",
+          `${process.env.REACT_APP_HOST}/api/ai/chat`,
           {
             symptoms,
             age,

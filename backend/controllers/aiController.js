@@ -104,7 +104,7 @@ Rules:
         headers: {
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost:5000",
+          "HTTP-Referer": `${process.env.REACT_APP_HOST}`,
           "X-Title": "Telemed Guide"
         }
       }
