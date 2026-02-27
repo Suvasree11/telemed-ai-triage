@@ -1,0 +1,140 @@
+.chat-container {
+  /* max-width: 500px; */
+    width: 90%;
+  max-width: 800px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+
+  background: #ffffff;
+  border-radius: 20px; /* smoother radius */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden; /* VERY IMPORTANT for proper rounding */
+}
+
+/* Chat message area */
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f5f7fb;
+}
+
+/* Chat bubbles */
+.chat-bubble {
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 18px;
+max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Bot bubble */
+.bot {
+  background: #e4e6eb;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+}
+
+/* User bubble */
+.user {
+  background: #2563eb;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  border-top: 1px solid #eee;
+  background: #ffffff;
+  padding: 8px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background: #f1f1f1;
+  outline: none;
+}
+
+.input-area button {
+  margin-left: 8px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  background: #0084ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-area button:hover {
+  background: #2563eb;
+}
+
+/* PDF button */
+.pdf-btn {
+  margin: 10px;
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pdf-btn:hover {
+  background: #218838;
+}
+
+
+
+.input-area {
+  display: flex;
+  padding: 12px;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: #f3f4f6;
+}
+
+.input-area button {
+  background: #2563eb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+
+  .chat-container {
+    max-width: 100%;
+            width: 90%;
+        height: 85vh;
+    margin: 10px auto;
+    border-radius: 15px;
+  }
+
+  .chat-box {
+    padding: 10px;
+  }
+
+  .input-area input {
+    font-size: 16px; /* prevents zoom on iOS */
+  }
+}

@@ -1,0 +1,18 @@
+# node
+node_modules/
+.env
+.env.local
+
+# logs
+logs
+*.log
+
+# build
+dist/
+build/
+
+
+backend/node_modules/
+frontend/node_modules/
+# mac
+.DS_Store
